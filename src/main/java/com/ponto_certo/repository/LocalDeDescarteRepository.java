@@ -10,4 +10,5 @@ public interface LocalDeDescarteRepository extends JpaRepository<LocalDeDescarte
     List<LocalDeDescarte> findByItensContaining(Itens item);
     List<LocalDeDescarte> findByEndereco_Cidade(String cidade);
     List<LocalDeDescarte> findByEndereco_CidadeAndItensContaining(String cidade, Itens item);
+    List<LocalDeDescarte> findByFazColetaTrue();
 }
