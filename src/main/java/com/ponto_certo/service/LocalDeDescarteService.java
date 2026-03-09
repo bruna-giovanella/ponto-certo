@@ -2,7 +2,6 @@ package com.ponto_certo.service;
 
 import com.ponto_certo.domain.LocalDeDescarte;
 import com.ponto_certo.domain.enums.Itens;
-import com.ponto_certo.repository.EnderecoRepository;
 import com.ponto_certo.repository.LocalDeDescarteRepository;
 import org.springframework.stereotype.Service;
 
