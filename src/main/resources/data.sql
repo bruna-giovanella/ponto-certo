@@ -1,6 +1,6 @@
 
 INSERT INTO enderecos (cidade, bairro, endereco) VALUES
-('Joinville', 'Centro', 'Rua Blumenau, 123'),
+('Curitiba', 'Centro', 'Rua Blumenau, 123'),
 ('Joinville', 'Bucarein', 'Rua Paulo Malschitzki, 10'),
 ('Joinville', 'Aventureiro', 'Rua Arno Waldemar Döhler, 530'),
 ('Joinville', 'Floresta', 'Rua Visconde de Taunay, 2155'),

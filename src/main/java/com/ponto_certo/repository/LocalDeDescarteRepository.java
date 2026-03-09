@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface LocalDeDescarteRepository extends JpaRepository<LocalDeDescarte, Long> {
     List<LocalDeDescarte> findByItensContaining(Itens item);
+    List<LocalDeDescarte> findByEndereco_Cidade(String cidade);
+    List<LocalDeDescarte> findByEndereco_CidadeAndItensContaining(String cidade, Itens item);
 }

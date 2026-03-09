@@ -5,10 +5,7 @@ import com.ponto_certo.domain.enums.Itens;
 import com.ponto_certo.service.LocalDeDescarteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,5 +27,20 @@ public class LocalDeDescarteController {
     @GetMapping("/por-item")
     public ResponseEntity<List<LocalDeDescarte>> findByItem(@RequestParam Itens item) {
         return ResponseEntity.status(HttpStatus.OK).body(localDeDescarteService.findByItem(item));
+    }
+
+    @GetMapping("/por-cidade")
+    public ResponseEntity<List<LocalDeDescarte>> findByCidade(@RequestParam String cidade) {
+        return ResponseEntity.status(HttpStatus.OK).body(localDeDescarteService.findByCidade(cidade));
+    }
+
+    @GetMapping("/por-cidade-e-item")
+    public ResponseEntity<List<LocalDeDescarte>> findByCidadeAndItem(@RequestParam String cidade, Itens item) {
+        return ResponseEntity.status(HttpStatus.OK).body(localDeDescarteService.findByCidadeAndItem(cidade, item));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<LocalDeDescarte> findById(@PathVariable(name="id") Long id) {
+        return ResponseEntity.status(HttpStatus.OK).body(localDeDescarteService.findById(id));
     }
 }
