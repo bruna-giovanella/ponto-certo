@@ -1,6 +1,5 @@
 package com.ponto_certo.service;
 
-import com.ponto_certo.domain.Endereco;
 import com.ponto_certo.domain.LocalDeDescarte;
 import com.ponto_certo.domain.enums.Itens;
 import com.ponto_certo.repository.EnderecoRepository;
@@ -13,11 +12,9 @@ import java.util.List;
 public class LocalDeDescarteService {
 
     private final LocalDeDescarteRepository localDeDescarteRepository;
-    private final EnderecoRepository enderecoRepository;
 
-    public LocalDeDescarteService(LocalDeDescarteRepository localDeDescarteRepository, EnderecoRepository enderecoRepository) {
+    public LocalDeDescarteService(LocalDeDescarteRepository localDeDescarteRepository) {
         this.localDeDescarteRepository = localDeDescarteRepository;
-        this.enderecoRepository = enderecoRepository;
     }
 
     public List<LocalDeDescarte> findAll() {
