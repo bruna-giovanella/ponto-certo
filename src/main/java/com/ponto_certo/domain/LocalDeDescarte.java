@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="locais_de_descarte")
@@ -26,7 +27,7 @@ public class LocalDeDescarte {
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "locais_de_descarte_itens", joinColumns = @JoinColumn(name = "local_id"))
     @Column(name = "item")
-    private ArrayList<Itens> itens;
+    private List<Itens> itens;
 
     private boolean fazColeta;
 
@@ -58,7 +59,7 @@ public class LocalDeDescarte {
         this.horaFim = horaFim;
     }
 
-    public ArrayList<Itens> getItens() {
+    public List<Itens> getItens() {
         return itens;
     }
 
