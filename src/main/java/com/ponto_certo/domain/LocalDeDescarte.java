@@ -23,6 +23,8 @@ public class LocalDeDescarte {
 
     private LocalTime horaFim;
 
+    private String email;
+
     @ElementCollection
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "locais_de_descarte_itens", joinColumns = @JoinColumn(name = "local_id"))
@@ -58,6 +60,10 @@ public class LocalDeDescarte {
     public void setHoraFim(LocalTime horaFim) {
         this.horaFim = horaFim;
     }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 
     public List<Itens> getItens() {
         return itens;
