@@ -22,8 +22,6 @@ public class LocalDeDescarte {
 
     private LocalTime horaFim;
 
-    private boolean aberto;
-
     @ElementCollection
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "locais_de_descarte_itens", joinColumns = @JoinColumn(name = "local_id"))
@@ -58,14 +56,6 @@ public class LocalDeDescarte {
 
     public void setHoraFim(LocalTime horaFim) {
         this.horaFim = horaFim;
-    }
-
-    public boolean isAberto() {
-        return aberto;
-    }
-
-    public void setAberto(boolean aberto) {
-        this.aberto = aberto;
     }
 
     public ArrayList<Itens> getItens() {
