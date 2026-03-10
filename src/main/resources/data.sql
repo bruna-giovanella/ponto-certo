@@ -16,7 +16,7 @@ INSERT INTO enderecos (cidade, bairro, endereco) VALUES
 -- LOCAIS DE DESCARTE
 -- 1. Ecoponto Centro - amplo, faz coleta
 INSERT INTO locais_de_descarte (endereco_id, hora_inicio, hora_fim, faz_coleta, email) VALUES
-(1, '07:00:00', '18:00:00', true, 'ecoponto.centro@joinville.sc.gov.br');
+(1, '07:00:00', '18:00:00', true, 'brugiovanella@gmail.com');
 
 -- 2. Ecoponto Bucarein - faz coleta
 INSERT INTO locais_de_descarte (endereco_id, hora_inicio, hora_fim, faz_coleta, email) VALUES
